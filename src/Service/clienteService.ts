@@ -1,5 +1,5 @@
 import { Cliente } from '../Model/cliente.entity';
-import { AppDataSource } from '../db';
+import { AppDataSource } from '../data_source';
 
 interface ClienteInteface {
     nome: string;

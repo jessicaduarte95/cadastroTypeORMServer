@@ -13,8 +13,8 @@ export async function createCliente(req: Request, res: Response) {
     try {
         // const data: any = req.body
         const data = {
-            nome: "teste",
-            email: "testeEmail",
+            nome: "José",
+            email: "jose@gmail.com",
             cpf: "00008888",
         }
         const cliente = await createClienteService(data);
