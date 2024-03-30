@@ -11,12 +11,7 @@ export async function getCliente(req: Request, res: Response) {
 }
 export async function createCliente(req: Request, res: Response) {
     try {
-        // const data: any = req.body
-        const data = {
-            nome: "José",
-            email: "jose@gmail.com",
-            cpf: "00008888",
-        }
+        const data: any = req.body
         const cliente = await createClienteService(data);
         return res.status(201).json(cliente);
     } catch (error: any) {
