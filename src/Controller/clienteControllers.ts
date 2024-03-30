@@ -36,11 +36,7 @@ export async function updateCliente(req: Request, res: Response) {
 
 export async function deleteCliente(req: Request, res: Response) {
     try {
-
-        // const id: number = req.params.id;
-
-        const id: number = 2
-
+        const id: any = req.params.id;
         const cliente = await deleteClienteService(id);
         return res.status(201).json(cliente);
     } catch (error: any) {
