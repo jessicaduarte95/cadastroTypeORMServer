@@ -36,12 +36,12 @@ export async function createClienteService(data: ClienteInteface) {
     }
 }
 
-export async function updateClienteService(data: ClienteInteface) {
+export async function updateClienteService(data: ClienteInteface, id: number) {
 
     try {
 
         const findCliente = await clienteRepository.findOneBy({
-            id: 3,
+            id,
         })
 
         if (findCliente) {

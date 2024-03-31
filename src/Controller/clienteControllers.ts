@@ -21,13 +21,9 @@ export async function createCliente(req: Request, res: Response) {
 
 export async function updateCliente(req: Request, res: Response) {
     try {
-        // const data: any = req.body
-        const data = {
-            nome: "Novo nome",
-            email: "novoemail@example.com",
-            cpf: "1111111111111",
-        }
-        const cliente = await updateClienteService(data);
+        const data: any = req.body;
+        const id: any = req.params.id;
+        const cliente = await updateClienteService(data, id);
         return res.status(201).json(cliente);
     } catch (error: any) {
         return res.status(500).json({ error: "Erro ao atualizar dados. Por favor, tente mais tarde!" })
